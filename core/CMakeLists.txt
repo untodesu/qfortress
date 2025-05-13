@@ -20,6 +20,7 @@ add_library(core STATIC
 target_compile_features(core PUBLIC cxx_std_20)
 target_include_directories(core PUBLIC "${PROJECT_SOURCE_DIR}")
 target_precompile_headers(core PUBLIC "${CMAKE_CURRENT_LIST_DIR}/pch.hh")
+target_link_libraries(core PUBLIC glm physfs)
 
 if(WIN32)
     target_compile_definitions(core PUBLIC _CRT_SECURE_NO_WARNINGS)

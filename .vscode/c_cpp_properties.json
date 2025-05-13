@@ -1,0 +1,23 @@
+{
+    "version": 4,
+    "configurations": [
+        {
+            "name": "QFortress",
+            "cppStandard": "c++20",
+            "cStandard": "c99",
+            "defines": [
+                "GLFW_INCLUDE_NONE",
+                "NOMINMAX",
+                "_CRT_SECURE_NO_WARNINGS",
+                "_USE_MATH_DEFINES"
+            ],
+            "includePath": [
+                "${workspaceFolder}/deps/glm/include/",
+                "${workspaceFolder}/deps/physfs/include/",
+                "${workspaceFolder}/game/",
+                "${workspaceFolder}",
+                "${default}"
+            ]
+        }
+    ]
+}

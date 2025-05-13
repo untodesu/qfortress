@@ -12,6 +12,7 @@
 #include <cstdlib>
 #include <cstring>
 
+#include <algorithm>
 #include <chrono>
 #include <filesystem>
 #include <format>
@@ -19,11 +20,26 @@
 #include <iostream>
 #include <limits>
 #include <mutex>
+#include <ranges>
 #include <sstream>
+#include <stdexcept>
 #include <string>
 #include <type_traits>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
+
+#include <glm/fwd.hpp>
+
+#include <glm/mat4x4.hpp>
+#include <glm/vec2.hpp>
+#include <glm/vec3.hpp>
+#include <glm/vec4.hpp>
+
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/quaternion.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
+#include <physfs.h>
 
 #endif // CORE_PCH_HH
