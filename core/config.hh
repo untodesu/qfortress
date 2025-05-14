@@ -10,8 +10,8 @@ public:
     explicit Config(std::string_view filename);
     virtual ~Config(void) = default;
 
-    bool loadFile(std::string_view filename);
-    bool saveFile(std::string_view filename) const;
+    bool loadFile(const std::filesystem::path& path);
+    bool saveFile(const std::filesystem::path& path) const;
 
     void parseCommandline(void);
 

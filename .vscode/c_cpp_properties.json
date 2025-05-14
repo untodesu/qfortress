@@ -12,7 +12,9 @@
                 "_USE_MATH_DEFINES"
             ],
             "includePath": [
+                "${workspaceFolder}/deps/entt/include",
                 "${workspaceFolder}/deps/glm/include/",
+                "${workspaceFolder}/deps/parson/include/",
                 "${workspaceFolder}/deps/physfs/include/",
                 "${workspaceFolder}/game/",
                 "${workspaceFolder}",

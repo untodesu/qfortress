@@ -40,6 +40,6 @@
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include <physfs.h>
+#include <parson.h>
 
 #endif // CORE_PCH_HH

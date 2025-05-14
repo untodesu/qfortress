@@ -1,10 +1,10 @@
 /.vscode/*
 !/.vscode/c_cpp_properties.json
-/core/feature.hh
 /core/version.hh
+/build/
 /build32/
 /build64/
-/build/
+/conf/
 /*.log
 /*.ini
 /*.dll

@@ -1,7 +1,8 @@
 #include "core/pch.hh"
 
-#include "core/cmdline.hh"
 #include "core/logging.hh"
+
+#include "core/cmdline.hh"
 
 constexpr static const char* PUT_TIME_FORMAT = "%Y-%m-%d %H:%M:%S ";
 

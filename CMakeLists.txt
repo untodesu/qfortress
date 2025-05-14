@@ -30,10 +30,9 @@ add_subdirectory(core)
 add_subdirectory(deps)
 add_subdirectory(game)
 
-## Install assets and licenses
-install(FILES "${CMAKE_CURRENT_LIST_DIR}/LICENSE" DESTINATION ".")
-install(FILES "${CMAKE_CURRENT_LIST_DIR}/thirdpartylegalnotices.txt" DESTINATION ".")
 install(DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/data" DESTINATION ".")
+install(FILES "${CMAKE_CURRENT_LIST_DIR}/gameinfo.json" DESTINATION ".")
+install(FILES "${CMAKE_CURRENT_LIST_DIR}/thirdpartylegalnotices.txt" DESTINATION ".")
 
 set(CPACK_PACKAGE_NAME "qfortress")
 set(CPACK_PACKAGE_VENDOR "untodesu")

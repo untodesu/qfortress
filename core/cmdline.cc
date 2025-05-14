@@ -1,6 +1,7 @@
 #include "core/pch.hh"
 
 #include "core/cmdline.hh"
+
 #include "core/logging.hh"
 
 static std::unordered_set<std::string> s_options;

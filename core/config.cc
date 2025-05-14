@@ -1,6 +1,7 @@
 #include "core/pch.hh"
 
 #include "core/cmdline.hh"
+
 #include "core/config.hh"
 #include "core/cvar.hh"
 #include "core/strtools.hh"
@@ -11,9 +12,9 @@ Config::Config(std::string_view filename)
     loadFile(filename);
 }
 
-bool Config::loadFile(std::string_view filename)
+bool Config::loadFile(const std::filesystem::path& path)
 {
-    std::ifstream file(std::filesystem::path(filename), std::ios::in);
+    std::ifstream file(path, std::ios::in);
 
     if(!file.is_open()) {
         return false;
@@ -56,9 +57,9 @@ bool Config::loadFile(std::string_view filename)
     return true;
 }
 
-bool Config::saveFile(std::string_view filename) const
+bool Config::saveFile(const std::filesystem::path& path) const
 {
-    std::ofstream file(std::string(filename), std::ios::out);
+    std::ofstream file(path, std::ios::out);
 
     if(!file.is_open()) {
         return false;

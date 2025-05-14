@@ -1,2 +1,3 @@
+add_subdirectory(entt)
 add_subdirectory(glm)
-add_subdirectory(physfs)
+add_subdirectory(parson)

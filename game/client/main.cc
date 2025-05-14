@@ -1,16 +1,12 @@
 #include "client/pch.hh"
 
-#include "core/cmdline.hh"
-#include "core/logging.hh"
+#include "shared/game.hh"
 
 int main(int argc, char** argv)
 {
-    cmdline::init(argc, argv);
-    logging::init();
+    game_shared::init(argc, argv);
 
-    logging::info("Hello world!");
-
-    logging::deinit();
+    game_shared::deinit();
 
     return 0;
 }
