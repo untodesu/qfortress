@@ -13,6 +13,7 @@
 #include <cstring>
 
 #include <algorithm>
+#include <array>
 #include <chrono>
 #include <filesystem>
 #include <format>
@@ -27,6 +28,7 @@
 #include <type_traits>
 #include <unordered_map>
 #include <unordered_set>
+#include <utility>
 #include <vector>
 
 #include <glm/fwd.hpp>
@@ -41,5 +43,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 #include <parson.h>
+
+#include <spdlog/spdlog.h>
 
 #endif // CORE_PCH_HH

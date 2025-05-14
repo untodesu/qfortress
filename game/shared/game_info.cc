@@ -3,7 +3,6 @@
 #include "shared/game_info.hh"
 
 #include "core/cmdline.hh"
-#include "core/logging.hh"
 
 constexpr static const char* DEFAULT_GAME_NAME = "QFortress";
 constexpr static const char* DEFAULT_GAME_TITLE = "QFortress";
@@ -30,7 +29,7 @@ void game_info::init(void)
     game_info::conf = game_info::path / SUBDIR_CONF;
 
     if(!std::filesystem::exists(game_info::path)) {
-        logging::error("game_info: unable to locate game directory at {}", game_info::path.string());
+        spdlog::critical("game_info: unable to locate game directory at {}", game_info::path.string());
         std::terminate();
     }
 
@@ -38,7 +37,7 @@ void game_info::init(void)
     auto json_value = json_parse_file(json_path.string().c_str());
 
     if(json_value == nullptr) {
-        logging::error("game_info: unable to locate or parse gameinfo.json at {}", game_info::path.string());
+        spdlog::critical("game_info: unable to locate or parse gameinfo.json at {}", game_info::path.string());
         std::terminate();
     }
 
@@ -55,4 +54,6 @@ void game_info::init(void)
 
     std::filesystem::create_directories(game_info::conf);
     std::filesystem::create_directories(game_info::data);
+
+    spdlog::info("game_info: set game directory to [{}]", game_info::path.string());
 }

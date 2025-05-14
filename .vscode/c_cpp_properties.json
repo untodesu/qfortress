@@ -4,8 +4,9 @@
         {
             "name": "QFortress",
             "cppStandard": "c++20",
-            "cStandard": "c99",
+            "cStandard": "c17",
             "defines": [
+                "SPDLOG_USE_STD_FORMAT",
                 "GLFW_INCLUDE_NONE",
                 "NOMINMAX",
                 "_CRT_SECURE_NO_WARNINGS",
@@ -15,7 +16,7 @@
                 "${workspaceFolder}/deps/entt/include",
                 "${workspaceFolder}/deps/glm/include/",
                 "${workspaceFolder}/deps/parson/include/",
-                "${workspaceFolder}/deps/physfs/include/",
+                "${workspaceFolder}/deps/spdlog/include/",
                 "${workspaceFolder}/game/",
                 "${workspaceFolder}",
                 "${default}"

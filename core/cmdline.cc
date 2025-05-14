@@ -2,8 +2,6 @@
 
 #include "core/cmdline.hh"
 
-#include "core/logging.hh"
-
 static std::unordered_set<std::string> s_options;
 static std::unordered_map<std::string, std::string> s_arguments;
 
@@ -28,7 +26,7 @@ void cmdline::init(int argc, char** argv)
         std::string option_argv(argv[idx]);
 
         if(!isOptionString(option_argv)) {
-            logging::warn("cmdline: unknown option: {}", option_argv);
+            spdlog::warn("cmdline: unknown option: {}", option_argv);
             continue;
         }
 

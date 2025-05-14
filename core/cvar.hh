@@ -9,6 +9,21 @@ public:
     virtual void rawSetValue(const char* value) = 0;
 };
 
+class CVarBoolean final : public ICVar {
+public:
+    explicit CVarBoolean(bool default_value);
+    virtual ~CVarBoolean(void) override = default;
+
+    virtual const char* rawGetValue(void) const override;
+    virtual void rawSetValue(const char* value) override;
+
+    virtual bool getBoolean(void) const;
+    virtual void setBoolean(bool value);
+
+private:
+    bool m_value;
+};
+
 class CVarString final : public ICVar {
 public:
     explicit CVarString(std::string_view default_value);

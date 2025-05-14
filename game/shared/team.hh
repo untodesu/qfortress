@@ -9,7 +9,7 @@ enum class QF_Team : unsigned short {
     TF_Red,         ///< Methinks in TF lore RED is Reliable Excavation Demolition
 };
 
-template<QF_Team team_type>
+template<QF_Team team_value>
 struct TeamFlagComponent final {};
 
 using Team_Unassigned = TeamFlagComponent<QF_Team::Unassigned>;
@@ -19,7 +19,7 @@ using Team_TF_Red = TeamFlagComponent<QF_Team::TF_Red>;
 
 class TeamComponent final {
 public:
-    const QF_Team value;
+    QF_Team value;
 
 public:
     static void attach(entt::entity entity, QF_Team value);

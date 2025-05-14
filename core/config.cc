@@ -17,6 +17,8 @@ bool Config::loadFile(const std::filesystem::path& path)
     std::ifstream file(path, std::ios::in);
 
     if(!file.is_open()) {
+        spdlog::warn("config: cannot open {}", path.string());
+
         return false;
     }
 
@@ -41,7 +43,8 @@ bool Config::loadFile(const std::filesystem::path& path)
         auto separator = kv_string.find_first_of('=');
 
         if(separator == std::string::npos) {
-            // Silently ignore invalid lines
+            spdlog::warn("config: {}: invalid line: {}", path.string(), line);
+
             continue;
         }
 
@@ -62,6 +65,8 @@ bool Config::saveFile(const std::filesystem::path& path) const
     std::ofstream file(path, std::ios::out);
 
     if(!file.is_open()) {
+        spdlog::warn("config: cannot open {} for writing", path.string());
+
         return false;
     }
 

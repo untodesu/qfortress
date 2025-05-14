@@ -17,7 +17,7 @@ using Class_Default = ClassFlagComponent<QF_Class::Default>;
 
 class ClassComponent final {
 public:
-    const QF_Class value;
+    QF_Class value;
 
 public:
     static void attach(entt::entity entity, QF_Class value);
