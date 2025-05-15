@@ -4,10 +4,6 @@ project(QFortress LANGUAGES C CXX VERSION 0.1.0)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-## Declare build options
-option(BUILD_QFCLIENT "Build QFortress client" ON)
-option(BUILD_QFSERVER "Build QFortress server" ON)
-
 ## If possible, enable solution directories; this allows
 ## built-in pseudotargets like ALL_BUILD and ZERO_CHECK to
 ## be moved out of sight into a separate directory
@@ -29,6 +25,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
 add_subdirectory(core)
 add_subdirectory(deps)
 add_subdirectory(game)
+add_subdirectory(tools)
 
 install(DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/data" DESTINATION ".")
 install(FILES "${CMAKE_CURRENT_LIST_DIR}/gameinfo.json" DESTINATION ".")

@@ -74,5 +74,8 @@ void HealthComponent::fixedUpdate(void)
             health.value += SUPERHEAL_RATE * globals::fixed_frametime;
             health.value = std::min(health.value, base_health * SUPERHEAL_BASE_FACTOR);
         }
+
+        // Round up to nearest integer
+        health.value = std::ceilf(health.value);
     }
 }

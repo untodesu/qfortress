@@ -11,6 +11,8 @@ add_library(qf_core STATIC
     "${CMAKE_CURRENT_LIST_DIR}/epoch.cc"
     "${CMAKE_CURRENT_LIST_DIR}/epoch.hh"
     "${CMAKE_CURRENT_LIST_DIR}/pch.hh"
+    "${CMAKE_CURRENT_LIST_DIR}/setup.cc"
+    "${CMAKE_CURRENT_LIST_DIR}/setup.hh"
     "${CMAKE_CURRENT_LIST_DIR}/strtools.cc"
     "${CMAKE_CURRENT_LIST_DIR}/strtools.hh"
     "${CMAKE_CURRENT_LIST_DIR}/version.hh")

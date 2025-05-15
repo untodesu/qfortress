@@ -18,6 +18,7 @@
                 "${workspaceFolder}/deps/parson/include/",
                 "${workspaceFolder}/deps/spdlog/include/",
                 "${workspaceFolder}/game/",
+                "${workspaceFolder}/tools/",
                 "${workspaceFolder}",
                 "${default}"
             ]

@@ -1,0 +1,68 @@
+@SolidClass = worldspawn : "The world entity. There could be only one"
+[
+
+]
+
+@BaseClass Angles
+[
+    angles(string) : "Pitch Yaw Roll (X Y Z)" : "0 0 0"
+]
+
+@BaseClass TF_Team
+[
+    tf_team(choices) : "Team" : 0 =
+    [
+        1 : "Spectator"
+        2 : "TF_Blue"
+        3 : "TF_Red"
+    ]
+]
+
+@BaseClass TF_TeamFilter
+[
+    tf_teamfilter(choices) : "Team" : 7 =
+    [
+        1 : "Spectator"
+        2 : "TF_Blue"
+        3 : "TF_Red"
+        7 : "Everyone"
+    ]
+]
+
+@BaseClass TF_Class
+[
+    tf_class(choices) : "Class" : 0 =
+    [
+        2 : "Scout"
+        3 : "Soldier"
+        4 : "Pyro"
+        5 : "Demoman"
+        6 : "Heavy"
+        7 : "Engineer"
+        8 : "Medic"
+        9 : "Sniper"
+        10 : "Spy"
+    ]
+]
+
+@BaseClass TF_ClassFilter
+[
+    tf_classfilter(choices) : "Class" : 77 =
+    [
+        2 : "Scout"
+        3 : "Soldier"
+        4 : "Pyro"
+        5 : "Demoman"
+        6 : "Heavy"
+        7 : "Engineer"
+        8 : "Medic"
+        9 : "Sniper"
+        10 : "Spy"
+        77 : "Everyone"
+    ]
+]
+
+@PointClass base(Angles, TF_TeamFilter, TF_ClassFilter) = info_team_spawn : "Spawn point for players"
+[
+
+]
