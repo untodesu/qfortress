@@ -12,7 +12,6 @@ void qf_core::setup(int argc, char** argv)
 
     logger_sinks.clear();
     logger_sinks.push_back(std::make_shared<spdlog::sinks::stdout_color_sink_mt>());
-    logger_sinks.push_back(std::make_shared<spdlog::sinks::basic_file_sink_mt>("qf.log", true));
 
 #if defined(NDEBUG)
     constexpr auto default_loglevel = spdlog::level::info;
