@@ -3,12 +3,12 @@
 
 ]
 
-@BaseClass Angles
+@BaseClass = Angles
 [
     angles(string) : "Pitch Yaw Roll (X Y Z)" : "0 0 0"
 ]
 
-@BaseClass TF_Team
+@BaseClass = TF_Team
 [
     tf_team(choices) : "Team" : 0 =
     [
@@ -18,51 +18,35 @@
     ]
 ]
 
-@BaseClass TF_TeamFilter
+@BaseClass = TF_TeamFilter
 [
-    tf_teamfilter(choices) : "Team" : 7 =
+    tf_teamfilter(choices) : "Team" : 777 =
     [
         1 : "Spectator"
         2 : "TF_Blue"
         3 : "TF_Red"
-        7 : "Everyone"
+        777 : "Everyone"
     ]
 ]
 
-@BaseClass TF_Class
+@BaseClass = TF_Class
 [
     tf_class(choices) : "Class" : 0 =
     [
-        2 : "Scout"
-        3 : "Soldier"
-        4 : "Pyro"
-        5 : "Demoman"
-        6 : "Heavy"
-        7 : "Engineer"
-        8 : "Medic"
-        9 : "Sniper"
-        10 : "Spy"
+        2 : "Default"
     ]
 ]
 
-@BaseClass TF_ClassFilter
+@BaseClass = TF_ClassFilter
 [
-    tf_classfilter(choices) : "Class" : 77 =
+    tf_classfilter(choices) : "Class" : 777 =
     [
-        2 : "Scout"
-        3 : "Soldier"
-        4 : "Pyro"
-        5 : "Demoman"
-        6 : "Heavy"
-        7 : "Engineer"
-        8 : "Medic"
-        9 : "Sniper"
-        10 : "Spy"
-        77 : "Everyone"
+        2 : "Default"
+        777 : "Everyone"
     ]
 ]
 
-@PointClass base(Angles, TF_TeamFilter, TF_ClassFilter) = info_team_spawn : "Spawn point for players"
+@PointClass base(Angles, TF_TeamFilter, TF_ClassFilter) = info_player_spawn : "Spawn point for players"
 [
 
 ]
