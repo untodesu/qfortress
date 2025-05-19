@@ -31,8 +31,6 @@
 #include <utility>
 #include <vector>
 
-#define GLM_ENABLE_EXPERIMENTAL // <glm/gtx/string_cast.hpp> below breaks if we don't do this
-
 #include <Eigen/Eigen>
 
 #include <parson.h>

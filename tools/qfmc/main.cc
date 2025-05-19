@@ -4,6 +4,7 @@
 
 #include "game/shared/game_info.hh"
 
+#include "qfmc/geometry.hh"
 #include "qfmc/mapfile.hh"
 
 int main(int argc, char** argv)
@@ -20,6 +21,8 @@ int main(int argc, char** argv)
     game_info::init();
 
     mapfile::load(argv[1]);
+
+    geometry::build();
 
     qf_core::desetup();
 
