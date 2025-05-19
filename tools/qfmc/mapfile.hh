@@ -2,27 +2,28 @@
 #define QFMC_MAPFILE_HH
 #pragma once
 
-struct MAP_BrushPlane final {
-    glm::fvec3 points[3];
+struct Mapfile_BrushPlane final {
+    Eigen::Hyperplane<float, 3> hyperplane;
+    Eigen::Vector3f u_normal, v_normal;
+    Eigen::Vector2f uv_offset, uv_scale;
+    float uv_rotation_angle;
     std::string texture;
-    glm::fvec2 uv_scale;     ///< Texture scale
-    glm::fvec4 u_projection; ///< XYZ - normal, W - offset
-    glm::fvec4 v_projection; ///< XYZ - normal, W - offset
-    float rotation;          ///< Texture rotation
 };
 
-using MAP_Brush = std::vector<MAP_BrushPlane>;
+struct Mapfile_Brush final {
+    std::vector<Mapfile_BrushPlane> planes;
+};
 
-struct MAP_Entity final {
-    std::string class_name;
+struct Mapfile_Entity final {
     std::unordered_map<std::string, std::string> kv;
-    std::vector<MAP_Brush> geometry;
+    std::vector<Mapfile_Brush> geometry;
+    std::string class_name;
 };
 
 namespace mapfile
 {
-extern std::vector<MAP_Entity> entities;
-extern const MAP_Entity* worldspawn;
+extern std::vector<Mapfile_Entity> entities;
+extern const Mapfile_Entity* worldspawn;
 } // namespace mapfile
 
 namespace mapfile

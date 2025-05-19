@@ -29,7 +29,6 @@ add_subdirectory(tools)
 
 install(DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/data" DESTINATION ".")
 install(FILES "${CMAKE_CURRENT_LIST_DIR}/gameinfo.json" DESTINATION ".")
-install(FILES "${CMAKE_CURRENT_LIST_DIR}/thirdpartylegalnotices.txt" DESTINATION ".")
 
 set(CPACK_PACKAGE_NAME "qfortress")
 set(CPACK_PACKAGE_VENDOR "untodesu")

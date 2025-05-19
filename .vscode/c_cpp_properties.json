@@ -13,8 +13,8 @@
                 "_USE_MATH_DEFINES"
             ],
             "includePath": [
+                "${workspaceFolder}/deps/eigen/include/",
                 "${workspaceFolder}/deps/entt/include",
-                "${workspaceFolder}/deps/glm/include/",
                 "${workspaceFolder}/deps/parson/include/",
                 "${workspaceFolder}/deps/spdlog/include/",
                 "${workspaceFolder}/game/",

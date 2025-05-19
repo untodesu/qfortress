@@ -4,8 +4,8 @@
 
 class TransformComponent {
 public:
-    glm::fvec3 position;
-    glm::fvec3 angles;
+    Vector3f position;
+    Vector3f angles;
 
 public:
     static void interpolate(TransformComponent& out, const TransformComponent& a, const TransformComponent& b, float alpha);

@@ -19,7 +19,7 @@ add_library(qf_core STATIC
 target_compile_features(qf_core PUBLIC cxx_std_20)
 target_include_directories(qf_core PUBLIC "${PROJECT_SOURCE_DIR}")
 target_precompile_headers(qf_core PUBLIC "${CMAKE_CURRENT_LIST_DIR}/pch.hh")
-target_link_libraries(qf_core PUBLIC glm parson spdlog)
+target_link_libraries(qf_core PUBLIC eigen parson spdlog)
 
 if(WIN32)
     target_compile_definitions(qf_core PUBLIC _CRT_SECURE_NO_WARNINGS)
