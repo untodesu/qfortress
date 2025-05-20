@@ -13,11 +13,15 @@ void qf_core::setup(int argc, char** argv)
     logger_sinks.clear();
     logger_sinks.push_back(std::make_shared<spdlog::sinks::stdout_color_sink_mt>());
 
+    logger->set_level(spdlog::level::trace);
+
 #if defined(NDEBUG)
     constexpr auto default_loglevel = spdlog::level::info;
 #else
     constexpr auto default_loglevel = spdlog::level::trace;
 #endif
+
+    cmdline::init(argc, argv);
 
     if(cmdline::contains("quiet")) {
         logger->set_level(spdlog::level::warn);
@@ -31,8 +35,6 @@ void qf_core::setup(int argc, char** argv)
 
     logger->set_pattern("%H:%M:%S.%e %^[%L]%$ %v");
     logger->flush();
-
-    cmdline::init(argc, argv);
 
     spdlog::info("qf_core: project version {}", PROJECT_VERSION_STRING);
 }

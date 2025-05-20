@@ -39,4 +39,13 @@
 
 #include <spdlog/sinks/stdout_color_sinks.h>
 
+using Vector2f = Eigen::Vector2f;
+using Vector3f = Eigen::Vector3f;
+using Vector4f = Eigen::Vector4f;
+
+using Hyperplane3f = Eigen::Hyperplane<float, 3>;
+
+using Matrix3f = Eigen::Matrix3f;
+using Matrix4f = Eigen::Matrix4f;
+
 #endif // CORE_PCH_HH

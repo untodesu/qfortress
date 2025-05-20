@@ -6,6 +6,7 @@
 
 #include "qfmc/geometry.hh"
 #include "qfmc/mapfile.hh"
+#include "qfmc/wavefront.hh"
 
 int main(int argc, char** argv)
 {
@@ -23,6 +24,8 @@ int main(int argc, char** argv)
     mapfile::load(argv[1]);
 
     geometry::build();
+
+    wavefront::save("test.obj");
 
     qf_core::desetup();
 
